@@ -60,12 +60,12 @@ class ToDo_ListViewController: UITableViewController {
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             // what will happen one the user clicks the Add Item button on ou UIAlert
             self.itemArray.append(textField.text!)
-            
+            self.tableView.reloadData()
         }
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new Item"
             textField = alertTextField
-            self.tableView.reloadData()
+            
             
             
             
